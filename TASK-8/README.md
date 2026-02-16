@@ -49,20 +49,18 @@ Paste the following:
 # Base Image
 FROM nginx:latest
 
-# Set Working Directory
-WORKDIR /usr/share/nginx/html
+# Remove default nginx website
+RUN rm -rf /usr/share/nginx/html/*
 
-# Remove default files
-RUN rm -rf ./*
+# Copy our HTML file
+COPY index.html /usr/share/nginx/html/
 
-# Copy application files
-COPY index.html .
-
-# Expose required port
+# Expose port 80
 EXPOSE 80
 
-# Start Nginx
+# Start nginx
 CMD ["nginx", "-g", "daemon off;"]
+
 ```
 ---
 # Part 4: Build & Run Docker Image
