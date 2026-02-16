@@ -24,6 +24,22 @@ sudo systemctl status docker
 docker --version
 ```
 ---
+# Part 2: Create a Simple Application
+```
+mkdir devops-docker-task
+cd devops-docker-task
+```
+```
+vim index.html
+```
+```
+<h1>Hello from Docker-DevOps Task</h1>
+```
+---
+# Part 3: Dockerfile Creation
+
+
+
 
 
 
