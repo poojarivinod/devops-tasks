@@ -37,7 +37,28 @@ vim index.html
 ```
 ---
 # Part 3: Dockerfile Creation
+```
+vim  Dockerfile
+```
+```
+# Base Image
+FROM nginx:latest
 
+# Set Working Directory
+WORKDIR /usr/share/nginx/html
+
+# Remove default files
+RUN rm -rf ./*
+
+# Copy application files
+COPY index.html .
+
+# Expose required port
+EXPOSE 80
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
+```
 
 
 
