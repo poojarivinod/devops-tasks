@@ -25,21 +25,26 @@ docker --version
 ```
 ---
 # Part 2: Create a Simple Application
+create the devops-docker-task folder
 ```
 mkdir devops-docker-task
 cd devops-docker-task
 ```
+Create index.html
 ```
 vim index.html
 ```
+Paste the following:
 ```
 <h1>Hello from Docker-DevOps Task</h1>
 ```
 ---
 # Part 3: Dockerfile Creation
+create Dockerfile
 ```
 vim  Dockerfile
 ```
+Paste the following:
 ```
 # Base Image
 FROM nginx:latest
@@ -59,6 +64,37 @@ EXPOSE 80
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
 ```
+---
+# Part 4: Build & Run Docker Image
+## Build Docker Image
+```
+docker build -t devops-docker-task.1.0.0 .
+```
+## verify image
+```
+docker images
+```
+## Run container
+```
+docker run -d -p 8080:80 devops-docker-task:1.0.0
+```
+## Verify running container
+```
+docker ps
+```
+---
+# Access Application
+Open your browser and go to:
+```
+http://<public ip address of server>:8080
+```
+you should see
+```
+Hello from Docker-DevOps Task
+```
+
+
+
 
 
 
