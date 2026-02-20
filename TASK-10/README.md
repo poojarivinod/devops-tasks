@@ -16,24 +16,26 @@ npm install
 npm start  ( optional ) 
 node server.js & 
 ```
-docker run -d -p 8080:3000 todo:1.0.0
+---> now access from browser with port 3000 ( PublicIP:3000 )
 ```
 ps aux | grep node
 kill PID
 ```
 stops running application
+### install the docker
 ```
 yum install docker -y
 systemctl start docker
 systemctl enable docker
 systemctl status docker
 ```
- docker build -t todo:1.0.0 -f Dockerfile .
- ```
+```
+docker build -t todo:1.0.0 -f Dockerfile .
+```
 build the docker image
 ```
 docker run -d -p 8080:3000 todo:1.0.0
 ```
 run the docker image
-docker run -d -p 8080:3000 todo:1.0.0
+---> now access from browser with port 3000 ( PublicIP:3000 )
 
