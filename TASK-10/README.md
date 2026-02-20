@@ -17,3 +17,10 @@ npm start  ( optional )
 node server.js & 
 ```
 ---> now access from browser with port 3000 ( PublicIP:3000 )
+```
+ps aux | grep node
+kill PID
+```
+stops running application
+
+
