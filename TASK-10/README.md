@@ -5,8 +5,9 @@ Create Amazon linux EC2 Instance to test it locally .
 ```
 yum install git -y
 cd /opt
-git clone https://github.com/poojarivinod/devops-tasks.git
-cd devops-tasks.git/TASK-10/backend
+git clone https://github.com/jadalaramani/todo_cicd_end-end_project.git
+cd todo_cicd_end-end_project/
+cd backend/
 ```
 ```
 curl -fsSL https://rpm.nodesource.com/setup_18.x | bash -
