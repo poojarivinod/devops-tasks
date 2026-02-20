@@ -1,6 +1,6 @@
-### todo_cicd_end-end_project
+# todo_cicd_end-end_project
 
-## How to test locally or Manually ?
+### How to test locally or Manually ?
 Create Amazon linux EC2 Instance to test it locally .
 ```
 yum install git -y
