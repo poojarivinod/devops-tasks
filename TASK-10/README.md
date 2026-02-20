@@ -36,6 +36,6 @@ build the docker image
 ```
 docker run -d -p 8080:3000 todo:1.0.0
 ```
-run the docker image
+run the docker image<br>
 ---> now access from browser with port 3000 ( PublicIP:3000 )
 
