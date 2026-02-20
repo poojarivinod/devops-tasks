@@ -10,7 +10,7 @@ cd todo_cicd_end-end_project/
 cd backend/
 ```
 ```
-curl -fsSL https://rpm.nodesource.com/setup_18.x | bash -
+curl -fsSL https://rpm.nodesource.com/setup_22.x | bash -
 yum install -y nodejs
 npm install
 npm start  ( optional ) 
