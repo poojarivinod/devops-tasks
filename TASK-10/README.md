@@ -92,20 +92,20 @@ In Jenkins:
 
 ### Configure Quality Gate in SonarQube
 
-Create or Edit a Quality Gate in SonarQube
+* Create or Edit a Quality Gate in SonarQube
 
-Log in to SonarQube as an admin → Quality Gates tab.
+* Log in to SonarQube as an admin → Quality Gates tab.
 
-Either edit “Sonar way” or click “Create” to build your own gate.
+* Either edit “Sonar way” or click “Create” to build your own gate.
 
-Click “Set as Default” so every new project—and therefore your todo-node-app—uses it automatically.
+* Click “Set as Default” so every new project—and therefore your todo-node-app—uses it automatically.
 
-Add a Webhook for Jenkins in sonarqube
-SonarQube pushes Quality Gate results back to Jenkins through a webhook call.
+* Add a Webhook for Jenkins in sonarqube
+* SonarQube pushes Quality Gate results back to Jenkins through a webhook call.
 
-SonarQube → Administration ▶ Configuration ▶ Webhooks.
+* SonarQube → Administration ▶ Configuration ▶ Webhooks.
 
-Click “Create”
+* Click “Create”
 
 Name: sonarqube-webhook
 
