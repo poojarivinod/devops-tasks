@@ -182,8 +182,8 @@ Since Gmail blocks less secure apps, you need to create an App Password:
 Jenkins → Manage Jenkins → System
 
 ### B. Scroll to Extended E-mail Notification section and fill:
-Field	Value
-SMTP server	smtp.gmail.com
+:---Field	---:Value
+:---SMTP server	---:smtp.gmail.com
 SMTP Port	465
 Use SSL	✅ checked
 Use TLS	✅ Checked
