@@ -188,19 +188,15 @@ Jenkins → Manage Jenkins → System
 | SMTP Port    | 465              |
 | Use SSL      | ✅ Checked        |
 | Use TLS      | ✅ Checked        |
-|Field|Value|
 
-|SMTP server|smtp.gmail.com|
-SMTP Port	465
-Use SSL	✅ checked
-Use TLS	✅ Checked
 In Advance add credentials of email-cred
 ### C. Next scroll down E-mail Notification section and fill
-Field	Value
-SMTP server	smtp.gmail.com
-Use SSL	✅ checked
-Use TLS	✅ Checked
-SMTP Authentication	✅ Checked
+|Field	    |Value|
+|--------------------------|
+|SMTP server|smtp.gmail.com|
+|Use SSL	|✅ checked    |
+|Use TLS	|✅ Checked|
+|SMTP Authentication	|✅ Checked|
 SMTP Username	your Gmail address (e.g., your@gmail.com)
 SMTP Password	16-digit App Password (not your Gmail password)
 smtp port 465
