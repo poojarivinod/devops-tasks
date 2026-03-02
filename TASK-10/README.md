@@ -137,3 +137,65 @@ Sonarqube Scanner
 
 Blue ocean
 ```
+# kubectl and eksctl
+```
+curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin
+kubectl version --short --client
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin
+```
+```
+eksctl create cluster --name my-cluster
+```
+# Helm Install
+```
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+```
+# Configuring Email in jenkins
+
+## Step 1: Install Required Plugin
+```
+1.Go to Jenkins → Manage Jenkins → Plugins
+2.Install:
+Email Extension Plugin
+```
+## Step 2: Enable App Password in Gmail
+```
+Since Gmail blocks less secure apps, you need to create an App Password:
+
+1.Go to your Google Account → Security
+2.Enable 2-Step Verification
+3.After that, go to App passwords
+4.Generate an app password (e.g., for “Mail” on “Other (Custom)”)
+5.Note the 16-character password (you’ll use this in Jenkins)
+```
+## Step 3: Configure Email Settings in Jenkins
+```
+* Firstly add in jenkins credentials: username and password
+* username: your@gmail.com
+* password: 16character password
+* description:email-cred
+```
+### A. Go to:
+Jenkins → Manage Jenkins → System
+
+### B. Scroll to Extended E-mail Notification section and fill:
+Field	Value
+SMTP server	smtp.gmail.com
+SMTP Port	465
+Use SSL	✅ checked
+Use TLS	✅ Checked
+In Advance add credentials of email-cred
+### C. Next scroll down E-mail Notification section and fill
+Field	Value
+SMTP server	smtp.gmail.com
+Use SSL	✅ checked
+Use TLS	✅ Checked
+SMTP Authentication	✅ Checked
+SMTP Username	your Gmail address (e.g., your@gmail.com)
+SMTP Password	16-digit App Password (not your Gmail password)
+smtp port 465
+reply to addresss: your@gmail.com
+test the mail
