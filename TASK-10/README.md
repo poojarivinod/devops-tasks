@@ -198,8 +198,8 @@ In Advance add credentials of email-cred
 |Use TLS	|✅ Checked    |
 |SMTP Authentication|✅ Checked|
 
-SMTP Username	your Gmail address (e.g., your@gmail.com)
-SMTP Password	16-digit App Password (not your Gmail password)
-smtp port 465
-reply to addresss: your@gmail.com
+SMTP Username	your Gmail address (e.g., your@gmail.com)<br>
+SMTP Password	16-digit App Password (not your Gmail password)<br>
+smtp port 465<br>
+reply to addresss: your@gmail.com<br>
 test the mail
