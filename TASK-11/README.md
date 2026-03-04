@@ -10,13 +10,16 @@ This project demonstrates an **end-to-end CI/CD pipeline** for deploying a ToDo 
 * **EKS** → Managed Kubernetes cluster on AWS<br>
 ----
 ## Architecture Flow
-1.Developer pushes code → GitHub repository.
-2.GitHub Actions triggers:
-  -Build Docker image of the app.
-  -Push image to DockerHub.
-  -Deploy app to EKS using Helm.
-3.EKS provisions Kubernetes resources:
-  -Deployment (pods)
-  -Service (exposed as LoadBalancer)
-4.Application accessible via **AWS LoadBalancer DNS**
+
+1.Developer pushes code → GitHub repository.<br>
+2.GitHub Actions triggers:<br>
+  -Build Docker image of the app.<br>
+  -Push image to DockerHub.<br>
+  -Deploy app to EKS using Helm.<br>
+3.EKS provisions Kubernetes resources:<br>
+  -Deployment (pods)<br>
+  -Service (exposed as LoadBalancer)<br>
+4.Application accessible via **AWS LoadBalancer DNS**<br>
+
+---
 
