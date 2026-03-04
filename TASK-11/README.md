@@ -6,7 +6,7 @@ This project demonstrates an **end-to-end CI/CD pipeline** for deploying a ToDo 
 
 * **GitHub Actions** → CI/CD pipeline<br>
 * **DockerHub** → Image repository<br>
-* **Helm** → Kubernetes packaging & deployment<br>
+* **Helm** → Kubernetes packaging & deployment
 * **EKS** → Managed Kubernetes cluster on AWS<br>
 ----
 ## Architecture Flow
