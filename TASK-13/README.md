@@ -35,6 +35,7 @@ sudo usermod -aG docker jenkins
 ```
 ## Jenkins Job Configuration
 ### Job Name: Build-and-Deploy-App
+
 Stage 1: Clone Git Repository
 Repository URL: https://github.com/your-org/your-repo.git
 Branch: main
