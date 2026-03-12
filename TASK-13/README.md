@@ -52,4 +52,4 @@ ansible-playbook playbook.yml
 docker ps
 curl http://localhost:80
 ```
-3.Access Web App via EC2 public IP: http://<your-ec2-ip>:80
+3.Access Web App via EC2 public IP: `http://<your-ec2-ip>:80`
