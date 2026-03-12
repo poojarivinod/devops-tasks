@@ -37,7 +37,7 @@ sudo usermod -aG docker jenkins
 ### Job Name: Build-and-Deploy-App
 
 Stage 1: Clone Git Repository
-Repository URL: https://github.com/your-org/your-repo.git
+Repository URL: https://github.com/adarsh0331/Project_06_Ansible_Docker
 Branch: main
 Credentials: SSH key or GitHub token (if private)
 Stage 2: Trigger Ansible Playbook
