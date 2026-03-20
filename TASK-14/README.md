@@ -78,9 +78,8 @@ Once the file uploads, S3 will automatically send a PUT event to trigger your La
 ## Step 5: Verify CloudWatch Logs 
 1. Go to AWS Console → CloudWatch 
 2. In the sidebar, click Logs → Log groups 
-3. Find your log group: 
-�
-� /aws/lambda/processS3Upload 
+3. Find your log group:   
+/aws/lambda/process_s3_upload  
 
 4. Click the latest Log Stream 
 You’ll see entries like: 
