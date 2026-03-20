@@ -70,12 +70,12 @@ Option 1 — AWS Console
 1. Go to S3 → Your bucket 
 2. Click Upload 
 3. Choose a file (e.g., test.txt or image.jpg) 
-4. Click Upload 
-Option 2 — AWS CLI 
-aws s3 cp sample.txt s3://your-bucket-name/ 
-Once the file uploads, S3 will automatically send a PUT event to trigger your Lambda.
+4. Click Upload   
+Option 2 — AWS CLI   
+aws s3 cp sample.txt s3://your-bucket-name/   
+Once the file uploads, S3 will automatically send a PUT event to trigger your Lambda.  
 
-Step 5: Verify CloudWatch Logs 
+## Step 5: Verify CloudWatch Logs 
 1. Go to AWS Console → CloudWatch 
 2. In the sidebar, click Logs → Log groups 
 3. Find your log group: 
