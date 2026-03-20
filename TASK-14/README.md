@@ -31,6 +31,20 @@ Attach the following IAM policies to the role:
 AWSLambdaBasicExecutionRole → allows CloudWatch logging   
 AmazonS3ReadOnlyAccess → allows Lambda to read S3 object details
 
+
+Configure IAM Roles and Permissions 
+A. Lambda Execution Role 
+Create an IAM Role for Lambda: 
+1. Go to IAM → Roles → Create Role 
+2. Select AWS Service → Lambda → Next 
+3. Attach: 
+o AWSLambdaBasicExecutionRole 
+o AmazonS3ReadOnlyAccess 
+4. Name it:
+lambda-s3-trigger-role 
+5. Assign this role to your Lambda under: 
+Lambda → Configuration → Permissions 
+
 ## Step 2: Add Lambda Code 
 Example (Python): 
 ```
@@ -82,21 +96,24 @@ Once the file uploads, S3 will automatically send a PUT event to trigger your La
 /aws/lambda/process_s3_upload  
 
 4. Click the latest Log Stream 
-You’ll see entries like: 
-=== FULL EVENT PAYLOAD === 
-{ 
-  "Records": [ 
-    { 
-      "eventName": "ObjectCreated:Put", 
-      "s3": { 
-        "bucket": {"name": "my-demo-bucket"}, 
-        "object": {"key": "sample.txt", "size": 524} 
-      } 
-    } 
-  ] 
-} 
+You’ll see entries like:   
+File uploaded: README.pdf (581836 bytes) in bucket vinod9980  
+That confirms your setup is working perfectly.
 
-File uploaded: sample.txt (524 bytes) in bucket my-demo-bucket 
-That confirms your setup is working perfectly. 
+# Final Architecture Summary
+
+## Architecture Flow
+
+| Step | Component            | Purpose                                      |
+|------|---------------------|----------------------------------------------|
+| 1    | Lambda Function     | Executes code automatically                  |
+| 2    | S3 Trigger (PUT)   | Starts the event when a file is uploaded     |
+| 3    | CloudWatch Logs     | Captures execution logs                      |
+| 4    | IAM Roles           | Securely connects S3 ↔ Lambda ↔ CloudWatch   |
+| 5    | Log Event Payload   | Helps debug and analyze automation           |
+
+## Outcome
+
+Lambda automatically executes after a file is uploaded to S3.
 
 
