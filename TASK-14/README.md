@@ -26,8 +26,8 @@ process_s3_upload
 4. Select Runtime: 
 Python 3.11 or Node.js 18 
 5. Under Permissions → Change default execution role → Create a new role with basic 
-Lambda permissions 
-Attach the following IAM policies to the role: 
-AWSLambdaBasicExecutionRole → allows CloudWatch logging 
-AmazonS3ReadOnlyAccess → allows Lambda to read S3 object details 
+Lambda permissions   
+Attach the following IAM policies to the role:   
+AWSLambdaBasicExecutionRole → allows CloudWatch logging   
+AmazonS3ReadOnlyAccess → allows Lambda to read S3 object details   
 
